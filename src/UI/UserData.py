@@ -5,7 +5,7 @@ import wx, wx.grid
 # Class to display user data in grid for a selected date
 class UserGridData(wx.grid.PyGridTableBase):
     # TODO column name should be contants
-    _cols = "ID UserName Scores Total".split()
+    _cols = "UserName Scores Total".split()
     _data = list()
     _highlighted = set()
 
@@ -36,3 +36,7 @@ class UserGridData(wx.grid.PyGridTableBase):
     def InsertRows(self, lineList):
         for line in lineList:
             self._data.append(line)
+
+    def UpdateTable(self, lineList):
+        self._data = list()
+        self.InsertRows(lineList)
