@@ -48,19 +48,19 @@ class BuyerDAL(BaseDAL):
                 continue
 
             if buyerDict.has_key(buyerID):
-                buyerDict[buyerID].addScores(date, scores.split("#"))
+                buyerDict[buyerID].addScores(date, scores.split(Constants.SCORE_DELIMITER))
             else:
                 buyerScore = dict()
-                buyerScore[date] = scores.split("#")
+                buyerScore[date] = scores.split(Constants.SCORE_DELIMITER)
                 buyerDict[buyerID] = BuyerData(buyerID, buyerName, buyerScore)
 
         return buyerDict.values()
 
 
 if __name__ == "__main__":
-    lines = ['1|aa|20050901|100#200',
+    lines = ['1|aa|20050901|100 200',
              '1|aa|20050902|300',
-             "2|bb|20050101|2#2#222"]
+             "2|bb|20050101|2 2 222"]
 
     print "no date filter"
     for i in BuyerDAL.parse(lines, "*"):

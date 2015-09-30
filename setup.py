@@ -5,7 +5,7 @@ __author__ = 'yzhou7'
 
 setup(
     windows=[{
-        # 'script': 'src\UI\MainWindow.py',
+        # 'script': 'src\UI\BuyerPanel.py',
          'script': 'Main.py',
         'icon_resources': [(1, '.\Resource\panda.ico')]
     }]

@@ -1,11 +1,12 @@
 __author__ = 'yzhou7'
 
-import wx, wx.grid
+import wx
+import wx.grid
+
 
 # Class to display user data in grid for a selected date
 class UserGridData(wx.grid.PyGridTableBase):
-    # TODO column name should be contants
-    _cols = "UserName Scores Total".split()
+    _cols = "用户名 当日积分 当日总积分".split()
     _data = list()
     _highlighted = set()
 
@@ -40,3 +41,7 @@ class UserGridData(wx.grid.PyGridTableBase):
     def UpdateTable(self, lineList):
         self._data = list()
         self.InsertRows(lineList)
+
+    def Clear(self):
+        self._data = list()
+        self._highlighted = set()

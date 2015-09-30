@@ -33,7 +33,6 @@ class BuyerData:
     def toStringList(self):
         result = list()
 
-        # TODO optimize this, why need to convert to int before sum?
         for date in self.buyerScore.keys():
             print self.buyerScore[date]
             result.append([self.buyerId,

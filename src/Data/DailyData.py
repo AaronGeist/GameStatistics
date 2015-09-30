@@ -1,3 +1,5 @@
+from src.Strategy.ScoreCalculation import ScoreCalculation
+
 __author__ = 'yzhou7'
 
 class DailyData:
@@ -34,7 +36,7 @@ class DailyData:
             result.append([
                 userName,
                 " ".join(map(str, scoreList)),
-                str(sum(map(int, scoreList)))
+                str(ScoreCalculation.calculateTotal(scoreList))
             ])
         return result
 

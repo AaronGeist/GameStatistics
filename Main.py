@@ -4,7 +4,7 @@ import wx
 from src.UI.MainWindow import MainWindow
 
 app = wx.App(False)
-frame = MainWindow(None, 'GameStatisticsTool by AaronZhou')
+frame = MainWindow(None, 'Ó¯¿÷Í³¼Æ V1')
 app.MainLoop()
 
 # app = wx.App(False)

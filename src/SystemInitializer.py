@@ -16,7 +16,7 @@ class SystemInitializer:
 
     @staticmethod
     def createDir():
-        if not os._exists(Constants.DATA_DIR):
+        if not os.path.exists(Constants.DATA_DIR):
             os.makedirs(Constants.DATA_DIR)
 
     @staticmethod
@@ -26,12 +26,12 @@ class SystemInitializer:
 
     @staticmethod
     def createBuyerFile():
-        if not os._exists(Constants.BUYER_FILE_PATH):
+        if not os.path.exists(Constants.BUYER_FILE_PATH):
             file = open(Constants.BUYER_FILE_PATH, "w")
             file.close()
 
     @staticmethod
     def createSellerFile():
-        if not os._exists(Constants.SELLER_FILE_PATH):
+        if not os.path.exists(Constants.SELLER_FILE_PATH):
             file = open(Constants.SELLER_FILE_PATH, "w")
             file.close()
